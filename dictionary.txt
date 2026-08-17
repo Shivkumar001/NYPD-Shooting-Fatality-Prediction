@@ -1,0 +1,21 @@
+incident_key - Randomly generated persistent ID for each arrest
+occur_date - Exact date of the shooting incident
+occur_time - Exact time of the shooting incident
+boro - Borough where the shooting incident occurred
+loc_of_occur_desc - (no description provided)
+precinct - Precinct where the shooting incident occurred
+jurisdiction_code - Jurisdiction where the shooting incident occurred. Jurisdiction codes 0(Patrol), 1(Transit) and 2(Housing) represent NYPD whilst codes 3 and more represent non NYPD jurisdictions
+loc_classfctn_desc - (no description provided)
+location_desc - Location of the shooting incident
+statistical_murder_flag - Shooting resulted in the victim's death which would be counted as a murder
+perp_age_group - Perpetrator's age within a category
+perp_sex - Perpetrator's sex description
+perp_race - Perpetrator's race description
+vic_age_group - Victim's age within a category
+vic_sex - Victim's sex description
+vic_race - Victim's race description
+x_coord_cd - Midblock X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
+y_coord_cd - Midblock Y-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
+latitude - Latitude coordinate for Global Coordinate System, WGS 1984, decimal degrees (EPSG 4326)
+longitude - Longitude coordinate for Global Coordinate System, WGS 1984, decimal degrees (EPSG 4326)
+Lon_Lat (geocoded_column) - Longitude and Latitude Coordinates for mapping
