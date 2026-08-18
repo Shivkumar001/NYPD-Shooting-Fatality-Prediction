@@ -263,14 +263,24 @@ These artifacts correspond to the preprocessing and final LightGBM model used in
 ```text
 NYPD-Shooting-Fatality-Prediction/
 │
-├── Shooting_Incident_Fatality.ipynb
-├── NYPD_Shooting_Incident_Data__Historic_.csv
-├── dictionary.txt
-├── NYPD_Shooting_Fatality_Presentation.pptx
+├── data/
+│   └── NYPD_Shooting_Incident_Data__Historic_.csv
 │
-├── label_encoders.pkl
-├── lgbm_fatality_model.pkl
-└── standard_scaler.pkl
+├── models/
+│   ├── label_encoders.pkl
+│   ├── lgbm_fatality_model.pkl
+│   └── standard_scaler.pkl
+│
+├── notebooks/
+│   └── Shooting_Incident_Fatality.ipynb
+│
+├── docs/
+│   └── NYPD_Shooting_Fatality_Presentation.pptx
+│
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── dictionary.txt
 ```
 
 ---
