@@ -165,40 +165,43 @@ Five classification algorithms were evaluated:
 4. Linear SVM
 5. LightGBM
 
-### Performance Comparison
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| Logistic Regression | 58.80% | 24.16% | 53.18% | 33.22% | 0.5888 |
+| Decision Tree | 73.26% | 29.88% | 28.77% | 29.32% | 0.6338 |
+| Random Forest | 75.54% | 25.39% | 13.87% | 17.94% | 0.5784 |
+| **SVM** | **57.15%** | **24.03%** | **56.60%** | **33.74%** | **0.5916** |
+| LightGBM | 80.74% | 50.30% | 7.98% | 13.77% | 0.6795 |
 
-| Model               |   Accuracy |  Precision | Recall |   F1 Score |    ROC-AUC |
-| ------------------- | ---------: | ---------: | -----: | ---------: | ---------: |
-| **LightGBM**        | **0.8812** | **0.6941** | 0.5940 | **0.6403** | **0.9114** |
-| Random Forest       |     0.8756 |     0.6820 | 0.5640 |     0.6173 |     0.8920 |
-| Decision Tree       |     0.8501 |     0.6105 | 0.5820 |     0.5959 |     0.8402 |
-| SVM                 |     0.8290 |     0.5802 | 0.5950 |     0.5875 |     0.8610 |
-| Logistic Regression |     0.7940 |     0.4710 | 0.6120 |     0.5322 |     0.8240 |
+### 🏆 Final Model: SVM
 
-### 🏆 Final Model: LightGBM
+Based on the notebook's evaluation, **SVM** achieved the highest F1 Score among the evaluated models:
 
-LightGBM achieved the highest:
+- **F1 Score:** 0.3374
+- **ROC-AUC:** 0.5916
+- **Accuracy:** 57.15%
+- **Precision:** 24.03%
+- **Recall:** 56.60%
 
-* **F1 Score:** 0.6403
-* **ROC-AUC:** 0.9114
-* **Accuracy:** 88.12%
-* **Precision:** 69.41%
-
-It was therefore selected as the final model for the project.
+The model comparison highlights the difficulty of predicting the minority fatal class and the importance of evaluating metrics beyond accuracy.
 
 ---
 
-## 📈 LightGBM Evaluation
+## 📈 Model Evaluation
 
-### Final Metrics
+The final notebook evaluation focuses on the SVM classifier.
 
-| Metric    |  Score |
-| --------- | -----: |
-| Accuracy  | 88.12% |
-| Precision | 69.41% |
-| Recall    | 59.40% |
-| F1 Score  | 64.03% |
-| ROC-AUC   | 0.9114 |
+### SVM Metrics
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 57.15% |
+| Precision | 24.03% |
+| Recall | 56.60% |
+| F1 Score | 33.74% |
+| ROC-AUC | 0.5916 |
+
+The relatively low precision and F1 score demonstrate the difficulty of accurately identifying fatal incidents in this highly imbalanced classification problem.
 
 ### Confusion Matrix
 
@@ -306,8 +309,8 @@ NYPD-Shooting-Fatality-Prediction/
 * Shooting fatality is strongly associated with **location, time, and victim characteristics**.
 * The dataset contains a significant class imbalance, making accuracy alone an insufficient evaluation metric.
 * **SMOTE applied only to the training data** helped the models learn the minority fatal class.
-* **LightGBM** provided the strongest overall predictive performance.
-* **SHAP** provided model-level and individual-prediction explainability.
+* **SVM** achieved the highest F1 score among the evaluated models.
+* SHAP analysis was used to investigate feature contributions and model behavior.
 * Geographic features were among the strongest signals identified by both model importance and SHAP analysis.
 
 ---
